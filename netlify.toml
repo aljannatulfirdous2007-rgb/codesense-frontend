@@ -1,4 +1,8 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
 
+<<<<<<< HEAD
 
 cat <<EOF > netlify.toml
 [build]
@@ -8,3 +12,7 @@ cat <<EOF > netlify.toml
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 EOF
+=======
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+>>>>>>> f502b10 (Fix broken netlify.toml)
