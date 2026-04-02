@@ -1,9 +1,10 @@
 
 
-# Create netlify.toml file
-echo [build] > netlify.toml
-echo   command = "npm run build" >> netlify.toml
-echo   publish = ".next" >> netlify.toml
-echo. >> netlify.toml
-echo [[plugins]] >> netlify.toml
-echo   package = "@netlify/plugin-nextjs" >> netlify.toml
+cat <<EOF > netlify.toml
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+EOF
